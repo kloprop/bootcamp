@@ -11,7 +11,7 @@ public class DataType {
 
     //Floating point
     double dig = 3.5;
-    double dig2 =1;
+    double dig2 =1.3; 
 /*     System.out.println(dig); */
     
     //String
