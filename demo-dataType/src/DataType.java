@@ -1,5 +1,5 @@
 public class DataType {
-  public static void main(String []arg){
+  public static void main(String []args){
     //Number
     int num;//Declaration
     num=3; //Assignment
