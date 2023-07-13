@@ -37,5 +37,30 @@ public class Loops {
       }
     }
 
+    for (int i = 0; i < 6; i++) {
+      System.out.println("Hello");
+      if (i > 3) {
+        continue;
+      }
+      System.out.println("Bye!");
+    }
+
+/*     // Nested loop
+    for (int i = 0; i < 4; i++) {
+      for (int j = 0; j < 3; i++) {
+        System.out.println("Hello");
+      }
+    } // When i is 0 , j loop from 0 to 2 */
+    String message = "";
+    for (int i = 0; i < 5; i++) {
+      
+      for (int j = i ; j <= 5;j++) {
+        System.out.println(message+"*");
+        
+      
+      }
+    }
+
+
   } // end of main
 } // End of Main
