@@ -14,7 +14,7 @@ public class JavaQuest3 {
 
     Scanner input = new Scanner(System.in);
 
-    int number_Of_DaysInMonth = 0;
+    int number_Of_DaysInMonth = 31;
     String MonthOfName = "Unknown";
 
     System.out.print("Input a month number: ");
@@ -34,7 +34,6 @@ public class JavaQuest3 {
     switch (month) {
       case 1:
         MonthOfName = "January";
-        number_Of_DaysInMonth = 31;
         break;
       case 2:
         MonthOfName = "February";
@@ -44,12 +43,11 @@ public class JavaQuest3 {
           number_Of_DaysInMonth = 28;
         }
         break;
-        // Leap Year -> 29 days in February, otherwise 28.
-        // Definition: If a year is divisible by 4, and Not divisible by 100, OR
-        // divisible by 400.
+      // Leap Year -> 29 days in February, otherwise 28.
+      // Definition: If a year is divisible by 4, and Not divisible by 100, OR
+      // divisible by 400.
       case 3:
         MonthOfName = "March";
-        number_Of_DaysInMonth = 31;
         break;
       case 4:
         MonthOfName = "April";
@@ -57,7 +55,6 @@ public class JavaQuest3 {
         break;
       case 5:
         MonthOfName = "May";
-        number_Of_DaysInMonth = 31;
         break;
       case 6:
         MonthOfName = "June";
@@ -65,11 +62,9 @@ public class JavaQuest3 {
         break;
       case 7:
         MonthOfName = "July";
-        number_Of_DaysInMonth = 31;
         break;
       case 8:
         MonthOfName = "Augest";
-        number_Of_DaysInMonth = 31;
         break;
       case 9:
         MonthOfName = "September";
@@ -77,7 +72,6 @@ public class JavaQuest3 {
         break;
       case 10:
         MonthOfName = "October";
-        number_Of_DaysInMonth = 31;
         break;
       case 11:
         MonthOfName = "November";
@@ -85,13 +79,12 @@ public class JavaQuest3 {
         break;
       case 12:
         MonthOfName = "December";
-        number_Of_DaysInMonth = 31;
         break;
       // Complete the other months
     }
     System.out.println(
         MonthOfName + " " + year + " has " + number_Of_DaysInMonth + " days");
 
-        
+
   }
 }
