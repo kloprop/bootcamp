@@ -107,6 +107,45 @@ public class Conditional {
     }
     System.out.println(dayName);
 
+    String customerName = "Peter";
+    String greeting = "";
+    switch (customerName) {
+      case "Peter":
+      case "Tom":
+        greeting = "Hello!";
+        break;
+      case "John":
+        greeting = "Goodbye!";
+        break;
+      case "Judy":
+      case "Marry":
+        greeting = "Welcome!";
+        break;
+      default:
+        greeting = "Nice to meet you";
+    }
+    System.out.println(greeting + " " + customerName);
+
+    char grade2 = 'B';
+    int pocketMoney = 0;
+    switch (grade2) {
+      case 'A':
+        pocketMoney += 100;
+        break;
+      case 'B':
+        pocketMoney += 80;
+        break;
+      case 'C':
+        pocketMoney += 60;
+        break;
+      default:
+        pocketMoney += 40;
+    }
+
+    System.out.println("You can get " + pocketMoney);
+
+    
+
   } // end of main
 
 

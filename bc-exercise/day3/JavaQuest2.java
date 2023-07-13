@@ -3,7 +3,8 @@
  * 
  * a > 9 
  * str length < 27 
- * 2020 is a leap year. 2400 is a leap year.
+ * 2020 is a leap year. 
+ * 2400 is a leap year.
  */
 // Primitive types and operators
 public class JavaQuest2 {
@@ -38,6 +39,7 @@ public class JavaQuest2 {
      * then, it is a leap year.
      */
     int year1 = 2009;
+
     // Program a condition to check if it is a leap year.
     // But should NOT print anything.
     if (year1%4 == 0&&year1%100!=0||year1 %400==0) {

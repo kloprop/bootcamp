@@ -30,9 +30,13 @@ public class LogicalOperator {
     boolean res6 = a == b; // false
     boolean res7 = a != b; // true
 
-    
+    int test = 0;
+    int test1 = 1;
+    int test2 = 2;
 
-
+    if (test < 5 && test1 > 5 || test2 < 0) {
+      System.out.println("It works");
+    }
 
 
 
