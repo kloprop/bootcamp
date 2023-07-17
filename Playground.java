@@ -15,7 +15,7 @@ public class Playground {
       System.out.println(word.substring(0, i));
     }// remaining parts */
 
-    /* // Date and time
+/*     // Date and time
     Date date = new Date();
     SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/YY");
     SimpleDateFormat dateFormatter2 = new SimpleDateFormat("dd/MMMM/YY"); // four M provides full name
@@ -109,12 +109,15 @@ public class Playground {
     }
     System.out.println();
   } */
+
   //diamond star pattern 2
   int maxNumStar = 7;
-  int firstPatternEnd = maxNumStar/2+1;
-  for (int i = 0,left =maxNumStar/2,right = maxNumStar/2; i<firstPatternEnd ; i++,left--,right++){
-    for (int j = 0; j<maxNumStar;j++){
-      if ( j>=left  && j<=right ){
+  int firstPatternEnd = maxNumStar/2+1; //Print the first half without useing break
+  for (int i = 0,left = maxNumStar/2,right = maxNumStar/2; // Left and right pointer for printing star
+      i<firstPatternEnd ; // Rows
+      i++,left--,right++){ // Move the pointers
+    for (int j = 0; j<maxNumStar;j++){ // Columns
+      if ( j>=left  && j<=right ){ // Area to print star (between two pointers)
         System.out.print("*");
       }
       else{
@@ -124,9 +127,11 @@ public class Playground {
     System.out.println();
   }
 
-  for (int i = 0,left =0+i+1,right = maxNumStar-1-i-1; i<firstPatternEnd-1 ; i++,left++,right--){
+  for (int i = 0,left = 0+i+1,right = maxNumStar-1-i-1; // Remaining half (aware pointers position)
+      i< firstPatternEnd-1 ; i++, //Rows
+      left++,right--){ // Move the pointers
     for (int j = 0; j<maxNumStar;j++){
-      if (j>=left  && j<=right ){
+      if (j>=left  && j<=right ){ // Area to print stars
         System.out.print("*");
       }
       else{
@@ -135,6 +140,8 @@ public class Playground {
     }
     System.out.println();
   }
+
+  
   
   } // end of main
 } // End of Main
