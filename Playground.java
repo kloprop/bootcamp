@@ -1,4 +1,5 @@
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -141,7 +142,38 @@ public class Playground {
     System.out.println();
   }
 
+// Luck tester
+  int count = 0;
+  boolean get = false;
+  while (!get){
+    int tem = (int)(Math.random()*11);
+    count+=1;
+    if (tem == 10){
+      break;
+    }
+
+  }
+  if (count<=5){
+    System.out.println("Very lucky");
+  }
+  else if (count<=10){
+    System.out.println("Lucky");
+  }
+  else if (count<=15){
+    System.out.println("Normal");
+  }
+  else if (count<=20){
+    System.out.println("Bad lucky");
+  }
+  else {
+    System.out.println("Be careful");
+  }
+  System.out.println(count);
   
+  int [] nums = new int[] {1,2,3};
+  int [] nums1 = new int[] {4,5,6};
+  nums = nums1;
+  System.out.println(Arrays.toString(nums));
   
   } // end of main
 } // End of Main

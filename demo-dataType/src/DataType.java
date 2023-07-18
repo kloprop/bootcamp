@@ -57,6 +57,52 @@ public class DataType {
     String str3 = "helloworld";
     System.out.println(str3.charAt(2));
 
+
+
+
+    // Date conversion 
+
+    byte b = 2; 
+    // Upcasting (implicit coversion)
+    // byte -> short -> int -> long -> float -> double
+    // char -> int 
+    short s = b; // byte -> short, upcasting (promotion)
+    int i = s;
+    double d = s;
+    char p = 98;
+    int t = 'p';
+    System.out.println('b'+145); // char is converted into int automatically
+    System.out.println("p= "+ p+" t= "+t);
+
+/*     for (byte q = 127; q<129; q+=1){
+        System.out.println(q);
+    } */
+ 
+    //ASCII (int) to char
+
+    int g = 'k';
+    char g1 = 3;
+    char k =  (char)g; //downcasting 
+    char k1 = 126; // 66 is ASCII code, must without variable shoring 
+    System.out.println(k1);
+    // int -> char is downcasting, char -> int is upcasting.
+    // int and char can be converted freely when there is only data itself but not variable.
+    // if the data is stored in variable, the rule applys.
+
+
+    //big to small not ok as data is lossed, small to big is ok
+    int h = (int)1000L; //rule is applied
+    short s10 = 128; // 
+    byte o = (byte) s10; // rule is applied
+    byte o2 = 127L; // what if 128
+    byte o2sdf =  129; // what if 128
+    System.out.println(o2sdf);
+    byte z = 127;
+    z+=1;
+    byte o23 = z+1;
+    for (byte j = 127; i<130; i++){
+
+    }
   } //end of main
 
 } // End of Main

@@ -26,7 +26,6 @@ public class JavaQuest8 {
       max = arr[1];
       secondMax = arr[0];
     }
-
     for (int i = 2; i<arr.length;i++){
       if (arr[i]>max){
         secondMax = max;
