@@ -11,6 +11,9 @@ public class JavaQuest11 {
   // Calculate Delayed Arrival Time
   public static int findDelayedArrivalTime(int arrivalTime, int delayedTime) {
     // code here ...
+    if (delayedTime <=0){ //filter 1
+      return arrivalTime;
+    }
     int finalTime = arrivalTime+delayedTime;
 
     if (finalTime - 24 > 0){

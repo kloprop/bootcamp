@@ -3,7 +3,7 @@ public class Method {
     //length(),equals(),charAt()
 
     // isEmpty (length = 0) 
-    String str = "Hello";
+    String str = "null";
     String str2 = "";
     System.out.println(str.isEmpty());
     System.out.println(str2.isEmpty());

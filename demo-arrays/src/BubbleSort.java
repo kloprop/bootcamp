@@ -13,13 +13,13 @@ public class BubbleSort {
     // target : [1,2,3,4,5,8]
     int[] nums = new int[] {5, 1, 4, 8, 2};
     System.out.println(Arrays.toString(sort(nums)));
-    System.out.println(Arrays.toString(insection(nums)));
+   
   } // End of Main
 
   public static int[] sort(int[] arr) {
-    for (int i = 0; i<arr.length-1; i++){
-    for (int j = 0 ; j<arr.length -1- i;j++){
-      if (arr[j]>arr[j+1]){
+    for (int i = 0; i<arr.length-1; i++){ // Number of time to put the max to the rightmost
+    for (int j = 0 ; j<arr.length -1- i;j++){ 
+      if (arr[j]>arr[j+1]){ // The max num is put to the rightmost.
         int tem = arr[j];
         arr[j] = arr[j+1];
         arr[j+1] = tem;
@@ -29,15 +29,4 @@ public class BubbleSort {
   return arr;
   }
 
-  public static int [] insection (int [] arr){
-    for (int i = 0 ; i<arr.length;i++){
-      int target = arr[i];
-      for (int j = i; j>= 0 && arr[j-1]> arr[i];j--){
-        int tem = arr[j-1];
-        arr[j-1] = arr[j];
-        arr[j] =tem;
-      }
-    }
-    return arr;
-  }
 } // End of Class
