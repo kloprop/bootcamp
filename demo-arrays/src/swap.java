@@ -7,8 +7,7 @@ public class swap {
     for (int i =0 ; i<arr.length;i++){
       System.out.println(arr[i]);
     }
-    System.out.println(swapOddEvenCharacter("a"));
-    System.out.println(0%2);
+    System.out.println(swapOddEvenCharacter("a p"));
   } // end  of main
 
   public static String swapOddEvenCharacter(String str){
@@ -21,7 +20,7 @@ public class swap {
       arr[i] = arr[i+1];
       arr[i+1] = tem;
     }
-    String modified  = new String(arr); //method to turn charArr to String
+    String modified  = String.valueOf(arr); //method to turn charArr to String
     return modified ;
   }
 

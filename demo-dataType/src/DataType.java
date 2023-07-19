@@ -97,9 +97,11 @@ public class DataType {
     byte o2 = 127L; // what if 128
     byte o2sdf =  129; // what if 128
     System.out.println(o2sdf);
-    byte z = 127;
+
+
+    byte z = 120;
     z+=1;
-    byte o23 = z+1;
+    z = z+1;
     for (byte j = 127; i<130; i++){
 
     }

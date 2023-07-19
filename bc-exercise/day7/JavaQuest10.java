@@ -32,21 +32,29 @@ public class JavaQuest10 {
     System.out.println("Original Array : " + Arrays.toString(my_array));
 
     // code here
-    int [] newArr = new int[my_array.length];
-    if (indexPosition < my_array.length){ //return original array
-      
-      for (int i = 0; i<indexPosition;i++){ // copy the values before indexPosition to new array
-        newArr[i] = my_array[i]; 
+    int[] newArr = new int[my_array.length];
+    if (indexPosition < my_array.length) { // return original array
+
+      for (int i = 0; i < indexPosition; i++) { // copy the values before indexPosition to new array
+        newArr[i] = my_array[i];
       }
       newArr[indexPosition] = newValue; // insert new value
-      for (int j = indexPosition; j < my_array.length-1;j++){ // copy remaining values besides the last one
-        newArr[j+1] = my_array[j];
+      for (int j = indexPosition; j < my_array.length - 1; j++) { // copy remaining values besides the last one
+        newArr[j + 1] = my_array[j];
       }
-      my_array = newArr; //overwrite the original array
-    
-  }
+      my_array = newArr; // overwrite the original array
 
-      
+    }
+
+    /* Better version (from ChatGpt) // loop from the end til the index to add element
+    if (indexPosition < my_array.length) {
+      for (int i = my_array.length - 1; i > indexPosition; i--) {
+        my_array[i] = my_array[i - 1];
+      }
+      my_array[indexPosition] = newValue;
+    } */
+
+
 
     System.out.println("New Array: " + Arrays.toString(my_array));
   }
