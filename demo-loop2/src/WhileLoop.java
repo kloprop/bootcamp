@@ -5,6 +5,7 @@ public class WhileLoop {
     while (count<5){
       count++;
     }
+    System.out.println(count);
 
     boolean isHoliday = false;
     int counter = 0; 
@@ -31,21 +32,22 @@ public class WhileLoop {
 
     //break, continue
     int k = 0;
-    while(k <6){
+    while(k < 6){
       System.out.println("break: hello");
       k++;
-      if (k >3){
+      if (k > 3){
         break;
       } 
     }
     
     int j = 0;
-    while (j <6){
+    while (j < 6){
+      System.out.println(j);
       j++;
       if (j > 3){
         continue;
       }
-      System.out.println("continue: hello");
+      System.out.println("continue: hello"+ j);
     }
     
 

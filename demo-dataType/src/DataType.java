@@ -70,9 +70,10 @@ public class DataType {
     int i = s;
     double d = s;
     char p = 98;
-    int t = 'p';
+    int t = p;
     System.out.println('b'+145); // char is converted into int automatically
     System.out.println("p= "+ p+" t= "+t);
+    
 
 /*     for (byte q = 127; q<129; q+=1){
         System.out.println(q);
