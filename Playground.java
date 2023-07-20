@@ -175,10 +175,12 @@ public class Playground {
   nums = nums1;
   System.out.println(Arrays.toString(nums));
   
-  byte b = 1;
+/*   byte b = 1;
   b+=1;
   b = b+1;
-  System.out.println(b);
+  System.out.println(b); */
+
+
 
   } // end of main
 } // End of Main
