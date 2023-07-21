@@ -23,9 +23,9 @@ public class Game {
       if (input > bomb){
         max = input;
       }
-      if (input == bomb){
-        System.out.println("You are right!");
-      }
     }while (input != bomb);
+   
+    System.out.println("You are right!");
+    
   }
 }

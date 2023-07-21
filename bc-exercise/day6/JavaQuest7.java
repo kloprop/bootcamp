@@ -4,7 +4,7 @@
 public class JavaQuest7 {
   // Sum values of an array
   public static void main(String[] args) {
-/*     // Declare a int array, with value 1 to 10
+    // Declare a int array, with value 1 to 10
     // code here
     int sum = 0;
 
@@ -15,6 +15,6 @@ public class JavaQuest7 {
     for (int i =0; i<nums.length;i++){
       sum+= nums[i];
     }
-    System.out.println("The sum is " + sum); */
+    System.out.println("The sum is " + sum);
   }
 }

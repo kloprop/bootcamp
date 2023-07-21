@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class forEach {
+public class ForEach {
   public static void main (String [] args){
     // basic 
     for (int i = 0; i<3; i++){
