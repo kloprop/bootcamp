@@ -2,6 +2,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 
 public class RandomStuff {
   public static void main(String[] args) {
@@ -179,7 +180,9 @@ public class RandomStuff {
   b+=1;
   b = b+1;
   System.out.println(b); */
-
+  
+  int ran = new Random().nextInt(2);
+  System.out.println(ran);
 
 
   } // end of main
