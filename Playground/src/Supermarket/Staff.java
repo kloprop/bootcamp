@@ -57,8 +57,12 @@ public class Staff {
 
   public void adjustPerformance (int adjustment){
     this.performance += adjustment;
+    String f = "dd";
+
+    
   }
- 
+  
+
 
 
   

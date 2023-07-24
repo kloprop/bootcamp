@@ -72,4 +72,8 @@ Problem: Just suck at thinking how to sum up to zero
 Reason: Suddenly pop up the idea, really do not know why. Try to break down the q into small part. Imagine cases
         that would sum to zero. Please take a rest and claim down when suck.
 
+### Quest 17: minimum35Number
+similar to leet code 69, foucs on changing type( int to string to charArray)
 
+### Quest 18: firstPalindrome
+Applying method of finding palindrome to array.

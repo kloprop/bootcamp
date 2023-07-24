@@ -33,6 +33,6 @@ public class JavaQuest15 {
           count+=1;
         }
       }
-      return (int) ((count/s.length())*100); // return type shall be int, int shall wrap the whole statement
+      return (int)((count/s.length())*100) ; // return type shall be int, int shall wrap the whole statement
   }
 }

@@ -184,6 +184,19 @@ public class RandomStuff {
   int ran = new Random().nextInt(2);
   System.out.println(ran);
 
+  // get the number of integer
+  int num = 999;
+  int i = num;
+  int divide = 1;
+  while (i> 10){
+    i/= 10;
+    divide *=10;
+  }
+ int ran3 = new Random().nextInt(11)+20;
+ System.out.println(ran3);
+  
+    
+
 
   } // end of main
 } // End of Main
