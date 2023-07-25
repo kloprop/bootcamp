@@ -6,6 +6,7 @@ public class Car {
  private String color;
 
 
+
   public Car (){
     this.noOfWheel = 0;
     this.capacity = 0;

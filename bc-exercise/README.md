@@ -77,3 +77,7 @@ similar to leet code 69, foucs on changing type( int to string to charArray)
 
 ### Quest 18: firstPalindrome
 Applying method of finding palindrome to array.
+
+### Quest 18: Declare instance variables carYear and carModel
+
+

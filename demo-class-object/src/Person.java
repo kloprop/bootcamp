@@ -1,8 +1,7 @@
 public class Person { // class is a template for generating object
   //Describe the person by attributes
-  int age;
-
-  char gender;
+  private int age;
+  private char gender;
 
 /*   public static boolean isMale(char gender){ //belong to class ,static rely on data that outside the object
     if (gender == 'F'){

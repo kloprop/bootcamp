@@ -194,8 +194,15 @@ public class RandomStuff {
   }
  int ran3 = new Random().nextInt(11)+20;
  System.out.println(ran3);
+
+ StringBuilder sb = new StringBuilder ("rtyui");
+ StringBuilder sb1 = new StringBuilder ("rtyui");
+ sb1 = sb;
+ sb.append (5);
+
+ System.out.println(sb.toString());
+  System.out.println(sb.equals(sb1));
   
-    
 
 
   } // end of main
