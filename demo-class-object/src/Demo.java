@@ -1,4 +1,5 @@
 import java.lang.reflect.Parameter;
+import java.util.Arrays;
 
 public class Demo {
   public static void main(String [] args){
@@ -43,6 +44,16 @@ public class Demo {
 
     // Student
     Student john = new Student("John", "Wong", 17);
+
+    char c = '5'-'0';
+    int i = Integer.valueOf(c);
+    System.out.println(i);
+
+    String [] strs = new String [] {"Hello","lp"};
+    char [] chars = new char [] {'f','f'};
+    System.out.println(String.valueOf(chars)); 
+    
+    int [] arrs = new int [] {2,3,4,4};
     
    
 
