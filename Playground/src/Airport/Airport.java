@@ -17,6 +17,8 @@ public class Airport {
     this.trafficStatus = null;
   }
 
+
+
   public String getName (){
     return this.name;
   }
@@ -77,33 +79,48 @@ public class Airport {
     System.out.printf("%s is parked in %d !",aircraft.getModel(),index);
     System.out.println();
   }
+    public void extendParkingSpace(int packingSpace){
+      if (packingSpace < this.totalParkingSpace){
+        return;
+      }
+    this.totalParkingSpace = packingSpace;
+    this.parkingCrafts = new Aircraft[packingSpace];
+  }
 
 
   public static void main(String [] args){
     Airport port1 = new Airport("Hong Kong International Airport", "Hong Kong", 120);
 
+    
+    
     Aircraft plane = new Aircraft("SGH-03",400000,"03-03-2003",2013);
     plane.setYearOfLastCheck(2016);
     System.out.println(plane.isCheckExpired());
-
+    
     Aircraft plane2 = new Aircraft("SGH-04",500000,"03-03-2002",2012);
     plane2.setYearOfLastCheck(2012);
     System.out.println(plane2.isCheckExpired());
-
+    
     Aircraft plane3 = new Aircraft("SGH-05",600000,"03-03-2007",2018);
     plane3.setYearOfLastCheck(2019);
     System.out.println(plane3.isCheckExpired());
-
+    
     Aircraft plane4 = new Aircraft("SGH-06",700000,"03-03-2009",2020);
     plane4.setYearOfLastCheck(2022);
     System.out.println(plane4.isCheckExpired());
-
+    
     port1.parkAirCrafts(plane);
     port1.parkAirCrafts(plane2);
     port1.parkAirCrafts(plane3);
     port1.parkAirCrafts(plane4);
-
+    
     System.out.println(port1.getTrafficStatus());
+
+    System.out.println("Parking space:" + port1.totalParkingSpace);
+    System.out.println(Arrays.toString(port1.parkingCrafts));
+    port1.extendParkingSpace(100);
+    System.out.println("Parking space:" + port1.totalParkingSpace);
+    System.out.println(Arrays.toString(port1.parkingCrafts));
   } // End of Main
 } // End of Class
 

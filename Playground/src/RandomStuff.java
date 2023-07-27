@@ -202,8 +202,12 @@ public class RandomStuff {
 
  System.out.println(sb.toString());
   System.out.println(sb.equals(sb1));
-  
 
+  char c = 'c';
+  System.out.println(c == 'c'? 'c':"no");
+  double d = 4.11235;
+  double d1 = 2.045252;
+System.out.println(d/d1);
 
   } // end of main
 } // End of Main

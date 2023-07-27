@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class StringBox {
   private String string;
 
@@ -44,10 +46,28 @@ public class StringBox {
 
   }
 
+  public char[] toCharArray(){
+    char [] res = new char[this.string.length()];
+    for (int i = 0 ; i< res.length ; i++){
+      res[i] = this.string.charAt(i);
+    } 
+    return res;
+  }
+
   public static void main (String[] args){
     StringBox sb = new StringBox();
     sb.setString("t"); 
     sb.append("r").append("d");
-    System.out.println(sb.toString());
+    System.out.println(sb);
+    System.out.println(Arrays.toString(sb.toCharArray()));//[t,r,d]
+    
+    char [] result = sb.toCharArray(); //return address, result and res shall share same address [t,r,d]
+    //result[0] = 'a';
+    System.out.println(Arrays.toString(result)); // [a,r,d]
+    System.out.println(Arrays.toString(sb.toCharArray())); //[t,r,d]
+    
+    StringBuilder sb2 = new StringBuilder("d");
+    StringBuilder sb3 = new StringBuilder("d");
+    System.out.println(sb2.equals(sb3)); //false
   }
 }

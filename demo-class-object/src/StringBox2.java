@@ -10,9 +10,10 @@ public class StringBox2 {
       this.string[i] = arr[i];
     } */
 
-    // approach 2
-    // copyOf() -> new array obj, and with all copied values
-    this.string= Arrays.copyOf(arr,arr.length);
+     //approach 2
+    //copyOf() -> new array obj, and with all copied values
+    //this.string= Arrays.copyOf(arr,arr.length);
+    this.string = arr; //wrong
 
   }
 
@@ -43,11 +44,11 @@ public class StringBox2 {
 
   public static void main(String[] args) {
     char [] chars = new char [] {'a','v','f'};
-    StringBox2 box2 = new StringBox2 (chars);
-    box2.append("op");
-    chars[1] = 'i';
-    System.out.println(box2.toString());
-    System.out.println(chars);
-
+    StringBox2 box2 = new StringBox2 (chars); // passing array through constructor
+    System.out.println(box2.toString()); //[a,v,f]
+    //box2.append("op");
+    chars[1] = 'i'; // second value of chars changed
+    System.out.println(Arrays.toString(chars)); // [a,i,f]
+    System.out.println(box2.toString()); // [a,i,f]
   }
 }

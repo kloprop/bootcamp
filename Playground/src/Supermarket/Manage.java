@@ -33,6 +33,7 @@ public class Manage {
       System.out.println("The new salery is " + staff.getSalery());
       System.out.println();
       
+      
 
     }
   }

@@ -30,13 +30,11 @@ public class JavaQuest22 {
     // code here
     int sum = 0;
     int product = 1;
-    while( n >= 10){
+    while( n >= 1){
       sum += n%10; // manipulate the last digit
       product *= n%10;
       n  = n/10;
     }
-    sum+=n; // last digit
-    product*=n;
 
    return product - sum;
   }
