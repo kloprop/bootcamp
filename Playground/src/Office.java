@@ -41,4 +41,12 @@ public class Office {
   public void setWorkers(String [] workers){
     this.workers = workers;
   }
+  public static void main(String[] args) {
+    Clothes c = Clothes.of("Red", 'M');
+    c.display();
+    c.setColor("Green").setPattern("dotted").display();
+    c.getColor();
+    c.getPattern();
+  
+  }
 }

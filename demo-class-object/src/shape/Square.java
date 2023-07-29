@@ -3,35 +3,50 @@ package shape;
 import java.util.Arrays;
 
 public class Square {
-  private Edge [] edges; // instance variable
+  private final Edge [] edges; // instance variable // may not be initialized // address cant be changed // fixed length, no worry about how many edges
 
   public Square (){
+    int id = 0;
     this.edges = new Edge[4];
-    this.edges[0] = new Edge(3.0d, "RED");
-    this.edges[1] = new Edge(3.0d, "YEllOW");
-    this.edges[2] = new Edge(3.0d, "WHITE");
-    this.edges[3] = new Edge(3.0d, "BROWN");
+    this.edges[0] = new Edge(++id,3.0d, "RED");
+    this.edges[1] = new Edge(++id,3.0d, "YEllOW");
+    this.edges[2] = new Edge(++id,3.0d, "WHITE");
+    this.edges[3] = new Edge(++id,3.0d, "BROWN");
   }
-  public Square (double length){
+  private Square (double length){
+    int id = 0;
     this.edges = new Edge[4];
-    this.edges[0] = new Edge(length, "RED");
-    this.edges[1] = new Edge(length, "RED");
-    this.edges[2] = new Edge(length, "RED");
-    this.edges[3] = new Edge(length, "RED");
+    this.edges[0] = new Edge(++id,length, "RED");
+    this.edges[1] = new Edge(++id,length, "RED");
+    this.edges[2] = new Edge(++id,length, "RED");
+    this.edges[3] = new Edge(++id,length, "RED");
   }
 
-  public Edge[] getEdges(){
+  public static Square of (double length){ // user use of to create squre avoid directly call constructor
+    return new Square(length);
+  }
+  public static Square of (String str){
+    return new Square (Double.valueOf(str));
+  }
+
+  private Edge[] getEdges(){
     return this.edges;
   }
-  public static void main(String[] args) {
-    Square square = new Square();
-    Square square2 = new Square();
-    Square square3 = new Square(5);
 
-    square3.getEdges()[0].setColor("YELLOW");
-  
-
+  public void modify (double length){ // directly change the length without changing the array
+    for (int i = 0 ; i< this.edges.length ; i++){
+      this.getEdges()[i].setLength(length);
+    }
   }
+  public void modify (String color){
+    for (int i = 0 ; i< this.edges.length ; i++){
+      this.getEdges()[i].setColor(color);
+    }
+  }
+  public Edge getEdge(int edgeId){
+    return this.edges[edgeId -1];
+  }
+ 
 
 
 }

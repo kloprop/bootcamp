@@ -207,7 +207,19 @@ public class RandomStuff {
   System.out.println(c == 'c'? 'c':"no");
   double d = 4.11235;
   double d1 = 2.045252;
-System.out.println(d/d1);
+  System.out.println(d/d1);
+  char cg = 'u';
+
+  StringBuilder seeee = new StringBuilder();
+  
+
+  
+
+StringBuilder sb56 = new StringBuilder("abc");
+char ch = sb56.append("null").charAt(1);
+System.out.println(ch);
+
+
 
   } // end of main
 } // End of Main

@@ -66,8 +66,6 @@ public class StringBox {
     System.out.println(Arrays.toString(result)); // [a,r,d]
     System.out.println(Arrays.toString(sb.toCharArray())); //[t,r,d]
     
-    StringBuilder sb2 = new StringBuilder("d");
-    StringBuilder sb3 = new StringBuilder("d");
-    System.out.println(sb2.equals(sb3)); //false
+
   }
 }
