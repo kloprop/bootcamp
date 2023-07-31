@@ -4,7 +4,7 @@ public class Circle {
   private int id;
   private double radius;
 
-  private final double pi = 3.14; // can not be changed with final // static can be called without obj
+  private static final double pi = 3.14; // can not be changed with final // static can be called without obj
 
   private static int counter;
 

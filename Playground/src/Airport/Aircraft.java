@@ -1,5 +1,7 @@
 package Airport;
 
+import java.time.LocalDate;
+
 public class Aircraft {
   private String model;
   private int price;
@@ -30,7 +32,7 @@ public class Aircraft {
   }
 
   public boolean isCheckExpired(){
-    return ((2023 - this.yearOfLastCheck) > 5); 
+    return ((LocalDate.now().getYear() - this.yearOfLastCheck) > 5); 
   }
 
 }

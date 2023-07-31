@@ -1,5 +1,4 @@
 
-
 public class Clothes {
   private String color;
   private int price;
@@ -79,5 +78,7 @@ public class Clothes {
   public static void main(String[] args) {
     Clothes c = Clothes.of("Red", 'M');
     c.setColor("Green").setPattern("dotted").display();
+    char cg = '9';
+    System.out.println(cg%2);
   }
 } 
