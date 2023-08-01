@@ -1,3 +1,4 @@
+package Animal;
 public abstract class Animal {
   private String species;
   public double weight;

@@ -1,3 +1,4 @@
+
 public class Office {
   private int numOfTable;
   private String location;

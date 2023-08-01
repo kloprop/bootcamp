@@ -1,4 +1,5 @@
 
+
 public class Clothes {
   private String color;
   private int price;

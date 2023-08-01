@@ -1,3 +1,5 @@
+
+package Abstract;
 public class Student extends Adult {
   // Must implement super class abstract method
 
@@ -23,10 +25,7 @@ public class Student extends Adult {
     student.run();
     student.eat(); */
 
-    Dog d = new Dog("hi", 23.6, 56);
-    Fish f = new Fish("rt", 23.6, 56,2);
-    d.bark();
-    System.out.println(d.getSpecies());
+ 
     
 
   }

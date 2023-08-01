@@ -1,3 +1,4 @@
+package Abstract;
 public abstract class Adult extends Person{
   // abstract class extends abstract class
   // implicitly "extends" abstract method

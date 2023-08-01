@@ -1,3 +1,4 @@
+package Abstract;
 public abstract class Person { // can not final and abstract class at the same time, abstract class cant be created
   private int age ;
   private double height;

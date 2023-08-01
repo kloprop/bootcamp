@@ -29,7 +29,7 @@ public class X extends Y{
 
   public static void main(String[] args) {
     X x = new X("peter"); // x Peter, y John
-    System.out.println(x.getName()); //Peter
+    System.out.println(x.getName()); //Peter //hiding
     System.out.println(x.getParentName()); //John
     
     
@@ -37,8 +37,8 @@ public class X extends Y{
     // hiding
     //Y.staticMethod(); //hide super class (Y) static method
     
-    Y y = new X("Tommy"); // methods follow super class(Y)
-    System.out.println(y.getName()); // methods follow Y , value follow X
+    Y y = new X("Tommy"); // variables and methods from Y is overriden, others that Y does not own are hidden
+    System.out.println(y.getName()); // x get name is called
     
   }
 }
