@@ -10,7 +10,6 @@ public class Demo {
     System.out.println("car"+ car.equals(car4)); // true
 
 
-    Person peter = new Person(); // constructor
     Computer computer = new Computer(); 
     Car car2 = new Car(7,9,"Red");
     System.out.println(car.getColor());
