@@ -5,13 +5,13 @@ public class Main {
     Airplane a = new Airplane(500, -1);
     Airplane b = new Airplane(500, 1000);
     a.fly();
-  /*   System.out.println(a.equals(b));
-    Helicopter c = new Helicopter(0);
-    System.out.println(c.getMaxspeed());
-    Helicopter d = new Helicopter(3.3d);
-    c.fly();
-    d.fly();
-    System.out.println(c.equals(d));
-    System.out.println(a.toString()); */
+    Flyable a2 = new Helicopter(23);
+    Flyable a3 = new Airplane(23,5);
+
+    if(a2 instanceof Helicopter){
+      Helicopter h = (Helicopter) a2;
+      h.fly();
+    }
+  
   }
 }

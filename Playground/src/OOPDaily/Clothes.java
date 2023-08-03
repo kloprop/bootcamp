@@ -11,6 +11,8 @@ public class Clothes {
   private static final String[] colors = new String[] {"Red", "Green", "Blue"};
   private char size;
 
+  
+
   private Clothes(String color, char size) {
     this.color = color;
     this.price = 500;
@@ -81,5 +83,7 @@ public class Clothes {
     c.setColor("Green").setPattern("dotted").display();
     char cg = '9';
     System.out.println(cg%2);
+    
+    
   }
 } 
