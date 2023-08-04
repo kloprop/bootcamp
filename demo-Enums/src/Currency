@@ -1,0 +1,32 @@
+public enum Currency{
+  USD (1,"US Dollor"),
+  HKD (2,"Hong Kong Dollor"),
+  CNY (3,"Chinese Yuan Renminbi"),
+  GBP (4,"British Pound Sterling"),
+  ;
+
+  private int id;
+  private String desc;
+
+  private Currency(int id,String desc){
+    this.id = id;
+    this.desc = desc;
+  }
+
+  public String getDesc(){
+    return this.desc;
+  }
+  public String getId(){
+    return this.id;
+  }
+  public static Currency getCurrency(int id){
+    for (Currency cu : values()){
+      if (cu.getId() == id){
+        return cu;
+      }
+    }
+    return null;
+  }
+
+ 
+}

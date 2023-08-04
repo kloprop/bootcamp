@@ -4,9 +4,11 @@ public enum Color {
   BLUE("#0000FF"),
   ;
   private String hexCode;
+  static int count = 0;
 
-  private Color (String hexCode){
+   Color (String hexCode){
     this.hexCode = hexCode;
+    count++;
   }
 
   public String getHexCode(){
