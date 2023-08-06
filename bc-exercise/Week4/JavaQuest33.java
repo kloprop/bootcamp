@@ -26,6 +26,8 @@ public class JavaQuest33 {
     System.out.println(sortArrayByParity(new int[] { 1, 2, 3, 4 }));// output [4,2,1,3] or [2,4,3,1]
     System.out.println(sortArrayByParity(new int[] { 111, 2, 309, 4 }));// output [4,2,309,111] or [2,4,111,309]
     System.out.println(sortArrayByParity(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 100 }));
+    System.out.println(sortArrayByParity(new int[] { 2, 2, 3, 4, 5, 6, 7, 8, 9, 100 }));
+    System.out.println(sortArrayByParity(new int[] { 2, 1, 3, 4, 5, 6, 7, 8, 9, 100 }));
     // output
     // [100,2,8,4,6,7,5,9,3,1]
     // or [2,4,6,8,100,1,3,5,7,9]
@@ -33,13 +35,22 @@ public class JavaQuest33 {
   }
 
   public static String sortArrayByParity(int[] nums) {
-    for (int i = 1; i < nums.length; i++){
+    /* for (int i = 1; i < nums.length; i++){
       if(nums[i] % 2==0){
       for (int j = i; j>0 && nums[j-1]%2!=0; j--){
         int tem = nums[j];
         nums[j] = nums[j-1];
         nums[j-1] = tem;
       }
+      }
+    }
+    return Arrays.toString(nums); */
+
+    for (int i = 0, even = 0; i<nums.length; i++){
+      if (nums[i] %2  ==0){
+        int tem = nums[i];
+        nums[i] = nums[even];
+        nums[even++] = tem;
       }
     }
     return Arrays.toString(nums);

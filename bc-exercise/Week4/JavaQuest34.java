@@ -28,6 +28,19 @@ public class JavaQuest34 {
 
   // Approach 1
   public static boolean arrayStringsAreEqual(String[] word1, String[] word2) {
-    return word1 != null && String.join("", word1).equals(String.join("",word2));
+    //return word1 != null && String.join("", word1).equals(String.join("",word2));
+
+    StringBuilder sb = new StringBuilder();
+    StringBuilder sb2 = new StringBuilder();
+
+    for (String str : word1){
+      sb.append(str);
+    }
+    for (String str : word2){
+      sb2.append(str);
+    }
+    
+    return sb.toString().equals(sb2.toString());
+
   }
 }

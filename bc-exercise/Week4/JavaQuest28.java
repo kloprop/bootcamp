@@ -24,7 +24,7 @@ public static int StringsNumber(String[] patterns , String word){
 int count = 0;
 for(String str : patterns){
     if ("".equals(str))
-    count--;
+    continue;
     if (word.contains(str))
     count++;
 }

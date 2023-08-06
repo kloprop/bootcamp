@@ -33,13 +33,21 @@ public class JavaQuest35 {
   }
 
   private static String moveZeroes(int[] nums) {
-    for (int i = 0; i< nums.length; i++){
+    /* for (int i = 0; i< nums.length; i++){
       if(nums[i] != 0){
         for (int j = i; j>0 && nums[j-1] == 0; j--){
           int tem = nums[j];
           nums[j] = nums[j-1];
           nums[j-1] = tem;
         }
+      }
+    }
+    return Arrays.toString(nums); */
+    for (int i = 0 , numInd = 0; i < nums.length; i++){
+      if (nums[i] != 0){
+        int tem = nums[i];
+        nums[i] = nums[numInd];
+        nums[numInd++] = tem;
       }
     }
     return Arrays.toString(nums);
