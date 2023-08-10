@@ -32,6 +32,15 @@ System.out.println(findNonMinOrMax(new int[]{50,100,40,1}));// 40 or 50
 
   }
   public static int findNonMinOrMax(int[] nums) {
+      Arrays.sort(nums);
+      int max = nums[nums.length-1];
+      int min = nums[0];
+      for (int num : nums){
+        if (num != max && num != min){
+          return num;
+        }
+      }
+      return -1;
     }
 
 }

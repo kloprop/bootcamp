@@ -10,6 +10,9 @@ public class DemoStack {
     // 
     stack.push("abc");
     stack.push("def");
+    stack.push("de");
+    
+    System.out.println(stack.peek());
     System.out.println(stack.pop());
     System.out.println(stack.removeElement("abc"));
     System.out.println(stack);

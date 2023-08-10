@@ -42,12 +42,23 @@ s[0] != 'i' */
 public class JavaQuest39 {
   public static void main(String[] args) {
     System.out.println(finalString("string")); // rtsng
-    System.out.println(finalString("poiinter")); // ponter
     System.out.println(finalString("applei")); // elppa
+    System.out.println(finalString("poiinter")); // ponter
+    System.out.println(finalString("poiinier")); // ponter
 
   }
 
   public static String finalString(String s) {
-    
+    StringBuilder res = new StringBuilder();
+    for (int i = 0 ; i<s.length() ; i++){
+      char curr = s.charAt(i);
+      if (curr == 'i'){
+        res = res.reverse();
+      }
+      else{
+      res.append(curr);
+      }
+    }
+    return res.toString();
   }
 }
