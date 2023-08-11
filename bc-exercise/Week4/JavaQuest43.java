@@ -29,6 +29,14 @@ public class JavaQuest43 {
   }
 
   public static int findCenter(int[][] edges) {
+        int first = edges[0][0];
+        int second = edges[0][1];
+        
+        if (edges[1][0] == first || edges[1][0] == second){
+            return edges[1][0];
+        }else{
+            return edges[1][1];
+        }
   }
 
 }

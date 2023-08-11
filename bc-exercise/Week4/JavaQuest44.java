@@ -26,6 +26,22 @@ public class JavaQuest44 {
   }
 
   public static int differenceOfSum(int[] nums) {
+    int allSum = 0;
+    int digSum = 0;
+    for (int num : nums){
+      allSum += num;
+      digSum += degitSum(num);
+    }
+    return Math.abs(allSum - digSum);
+
+  }
+  public static int degitSum(int num){
+    int sum = 0;
+    while(num > 0){
+      sum += num%10;
+      num /= 10;
+    }
+    return sum;
 
   }
 

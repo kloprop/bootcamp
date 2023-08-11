@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public class Computer {
   //arttibutes
   private int ram;
@@ -39,6 +42,9 @@ public class Computer {
 
   public static void test(){
     System.out.println("HI");
+  }
+  public static void main(String[] args) {
+    List <Integer> list = new LinkedList<>();
   }
   
 } // End of Class
