@@ -1,3 +1,4 @@
+package B_zoo;
 public class Animal {
   String name;
   public Animal(String name){

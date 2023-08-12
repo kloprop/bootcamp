@@ -1,8 +1,8 @@
+package B_zoo;
 public class Dog extends Animal {
 
   String name;
   private Dog(String name){
-    super("hi");
     this.name= name;
   }
 

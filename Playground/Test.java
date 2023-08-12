@@ -4,14 +4,17 @@ public  class Test {
   public static double weight;
   private double height;
   private static double j;
-  private double d;
+  private Double d;
+ 
 
  public void setHeight(double height){
 this.height = height;
  }
+ public 
 
   public void print1(){
     System.out.println("public");
+    
   }
   private static void print2(){
     System.out.println("SYstem");

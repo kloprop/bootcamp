@@ -1,3 +1,4 @@
+package A_printer;
 public class NumberPrinter {
   int number;
   public static void print (int num){

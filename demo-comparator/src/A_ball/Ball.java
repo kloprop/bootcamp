@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class Ball implements Comparable<Ball> {
+public class Ball implements Comparable<Ball>  {
   int id;
   Color color;
 

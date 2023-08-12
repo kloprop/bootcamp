@@ -1,3 +1,4 @@
+package A_printer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,13 +13,14 @@ public class Printer<T>  { // dont know print what // Class signature, add <> T 
   }
 
   public void setValue(T value){
+    
     this.value = value;
   }
   public void setObject(Object ele){
     this.value2 = ele;
   }
   public Object getObject(){
-    return this.value2;
+    return this.value;
   }
 
 
