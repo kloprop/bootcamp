@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Stack;
+import A_ball.Ball;
+import A_ball.Color;
 
 public class DemoSorting {
     public static void main(String[] args)  {
@@ -33,6 +36,9 @@ public class DemoSorting {
         System.out.println("Original balls: " +balls);
         Collections.sort(balls);
         System.out.println("Sorted balls with able" + balls);
+        Stack <Integer>stack = new Stack<>();
+        stack.;
+       
 
 
     }

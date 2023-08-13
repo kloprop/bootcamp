@@ -10,7 +10,8 @@ public class Zoo <T extends Animal> {
 
   // range of T
   public static <T extends Animal> Zoo<T> of(T animal){ // Java dont know what is the type
-   return new Zoo<>(animal);
+    //this(animal);
+    return new Zoo<>(animal);
   }
 
 

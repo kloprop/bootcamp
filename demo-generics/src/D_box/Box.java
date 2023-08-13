@@ -1,3 +1,4 @@
+package D_box;
 
 
 import java.util.ArrayList;
@@ -38,7 +39,7 @@ public class Box<T extends Number> { // any class extending Object
   // }
 
   public static void main(String[] args) {
-    // Box<String> box1 = new Box<>();
+    //Box<String> box1 = new Box<>(); // compile error
     Box<Number> box1 = new Box<>(100); // compile-time check
     Box<Integer> box2 = new Box<>(100); // compile-time check
     Box<Double> box3 = new Box<>(100d); // compile-time check

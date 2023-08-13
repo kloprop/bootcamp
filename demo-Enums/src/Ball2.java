@@ -1,4 +1,5 @@
 import java.util.Objects;
+import A_ball.Color;
 
 public class Ball2{
   Color color;

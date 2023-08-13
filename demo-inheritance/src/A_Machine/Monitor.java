@@ -1,3 +1,4 @@
+package A_Machine;
 public class Monitor {
   private double length;
   private double width;
