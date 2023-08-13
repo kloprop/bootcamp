@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class ListsFactory<T extends Employee> {
+public final class EmployeesInfo<T extends Employee> {
 
   private List<T> list;
 
@@ -14,12 +14,12 @@ public class ListsFactory<T extends Employee> {
 
   private int departmentID;
 
-  private ListsFactory() {
+  private EmployeesInfo() {
     this.list = new ArrayList<>();
 
   }
 
-  private ListsFactory(Department department, T... staffs) {
+  private EmployeesInfo(Department department, T... staffs) {
     this();
     for (T staff : staffs) {
       this.list.add(staff);
@@ -29,8 +29,8 @@ public class ListsFactory<T extends Employee> {
 
   }
 
-  public static <T extends Employee> ListsFactory<T> of(Department department, T... staffs) {
-    return new ListsFactory<>(department, staffs);
+  public static <T extends Employee> EmployeesInfo<T> of(Department department, T... staffs) {
+    return new EmployeesInfo<>(department, staffs);
   }
 
   public int getDepartmentID() {
