@@ -6,10 +6,10 @@ public abstract class Employee {
   private String name;
   private LocalDate entryDate;
   private int salery;
-  private Department department;
+  private DepartmentName department;
 
   public Employee(String name, LocalDate entryDate, int salery,
-      Department department) {
+      DepartmentName department) {
 
 
     this.name = name;
@@ -31,7 +31,7 @@ public abstract class Employee {
     return this.salery;
   }
 
-  public Department getDepartment() {
+  public DepartmentName getDepartment() {
     return this.department;
   }
 
@@ -47,7 +47,7 @@ public abstract class Employee {
     this.salery = salery;
   }
 
-  public void setDepartment(Department department) {
+  public void setDepartment(DepartmentName department) {
     this.department = department;
   }
 
