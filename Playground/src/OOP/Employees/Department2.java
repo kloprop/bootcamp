@@ -6,20 +6,22 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public final class Department<T extends Employee> {
+public final class Department2{
 
-  private List<T> list;
+  private List<ITStaff> list;
+
+  private List<SalesStaff> list2;
 
   private DepartmentName department;
 
   private int departmentID;
 
-  private Department() {
+  private Department2() {
     this.list = new ArrayList<>();
 
   }
 
-  private Department(DepartmentName department, T... staffs) {
+  private Department2(DepartmentName department, T... staffs) {
     this();
     for (T staff : staffs) {
       this.list.add(staff);
@@ -29,16 +31,15 @@ public final class Department<T extends Employee> {
 
   }
 
-  public static <T extends Employee> Department<T> of(DepartmentName department, T... staffs) {
-    return new Department<>(department, staffs);
+  public static <T extends Employee> Department2<T> of(DepartmentName department, T... staffs) {
+    return new Department2<>(department, staffs);
   }
-  
 
   public int getDepartmentID() {
     return this.departmentID;
   }
 
-  public T getHighestSalery() {
+  public Employee getHighestSalery() {
     int max = Integer.MIN_VALUE;
     T target = null;
 
