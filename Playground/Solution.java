@@ -1,15 +1,31 @@
 package Playground;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Stream;
+
 class Solution {
-  public static void main(String[] args) {
-    System.out.println(toLowerCase("HELLO"));
-  }
-    public static String toLowerCase(String s) {
-        StringBuilder sb = new StringBuilder();
-        for (char c : s.toCharArray()){
-          char chars = (char) (c+32);
-            sb.append(chars);
+    public static int[] frequencySort(int[] nums) {
+        Map <Integer, Integer> map = new HashMap<>();
+        for (int num : nums){
+            map.put(num,map.getOrDefault(num,0)+1);
         }
-        return sb.toString();
+            nums = Arrays.stream(nums)
+            .boxed()
+            .sorted((n1, n2)->{
+            if (map.get(n1) == map.get(n2))
+                return n1 > n2 ? -1 : 1;
+            
+            return map.get(n1) > map.get(n2) ? 1:-1;
+        })
+            .mapToInt(Integer::intValue)
+            .toArray();
+        return nums;
+
     }
+    
+
 }
+

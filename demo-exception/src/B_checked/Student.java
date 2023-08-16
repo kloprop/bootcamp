@@ -2,6 +2,7 @@ package B_checked;
 
 public class Student {
   String name;
+  long pocketMoney;
 
   public Student (){
 
@@ -13,29 +14,41 @@ public class Student {
 
   public void setName(String name) throws NameTooLongException,NameTooUglyException{ // caller handle
     if (name.contains("j")){
-      throw new NameTooUglyException("Your name is ugly");
+      throw new NameTooUglyException("Ugly name");
+      //throw new NameTooUglyException("Your name is ugly");
     }
     if (name.length() > 10){
       throw new NameTooLongException("Name is too long(> 50)");
     }
     this.name = name;
   }
+  public void setPocketMoney(long pocketMoney)throws AmountZeroException{
+    if (pocketMoney < 1){
+      throw new AmountZeroException();
+    }
+    this.pocketMoney = pocketMoney;
+  }
 
  /*  public static void main(String[] args) throws NameNotMatchException{
     Student student = new Student("John");
     student.setName("ds"); // if exception, throw it to the caller
   } */
-  public static void main(String[] args) throws NameTooLongException { // trigger once one time?
+  public static void main(String[] args) throws NameTooLongException{ 
     Student student = new Student("John");
 
   /* try{ student.setName("dshjfhjfhgfgh"); // checked exception
   }catch (NameTooLongException e ){
     System.out.println("Nothing happen");
   } */
-  try{
-    student.setName("dshjfhjfhgfgh");
-  }catch(NameTooUglyException e){
+  try {
+    student.setName("dsh");
+    student.setPocketMoney(-7);
+  } catch(NameTooUglyException | AmountZeroException e){
     System.out.println("Your name is good");
+  }/* catch(Exception e){
+    System.out.println("All Solved");
+  } */finally{
+    System.out.println("finally");
   }
 
 
@@ -45,7 +58,7 @@ public class Student {
     student2.name.length();
   }
   catch(NullPointerException e){
-    System.out.println("ds");
+    System.out.println("null pointer");
   }
   }
 }
