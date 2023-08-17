@@ -1,3 +1,4 @@
+package E_predicate;
 import java.util.function.Predicate;
 
 public class CombineDemo {
