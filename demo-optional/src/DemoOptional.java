@@ -20,8 +20,8 @@ public class DemoOptional {
 
     Book book7 = books.stream()//
     .filter(b -> b.author.startsWith("Z"))//
-    .findAny()//
-    .orElseGet(() -> new Book("Defalut"));//
+    .findFirst()//
+    .orElse(new Page());//
 
     System.out.println("Test " + book7);
     

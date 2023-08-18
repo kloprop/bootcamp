@@ -1,6 +1,11 @@
 package Playground;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Deque;
+import java.util.List;
+import java.util.Queue;
 
 public class Main {
   public static void main(String[] args) {
@@ -14,5 +19,10 @@ public class Main {
     });
 
     System.out.print(Arrays.toString(strings));
+
+    Queue <Integer> queue = new ArrayDeque<>();
+    
+    
+    list.contains();
   }
 }
