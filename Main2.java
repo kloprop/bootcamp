@@ -3,5 +3,6 @@ public class Main2 {
     Father f = new Child();
     Child c = new Child();
     c.eat();
+    Sysetm.
   }
 }
