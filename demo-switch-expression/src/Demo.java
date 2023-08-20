@@ -27,12 +27,6 @@ public class Demo {
             
         };
 
-        String str = "Hello World";
-        String result2 = switch(str){
-            case String str.length() >5 -> "length >5";
-            case String str.contains("world") -> "contains world";
-            default -> "Unknown";
-        }
     }
     public static int getDayNumber (Weekday1 Weekday){
         switch(Weekday){
