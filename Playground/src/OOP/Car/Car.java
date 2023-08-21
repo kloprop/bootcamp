@@ -2,9 +2,9 @@ package OOP.Car;
 
 public class Car {
   private Engine engine = new Engine();
-  private Model model;
-  private double price;
-  private Color color;
+  private Model model ;
+  private double price ;
+  private Color color ;
 
   public Model getModel() {
     return this.model;
@@ -38,9 +38,9 @@ public class Car {
   }
 
   public static class Builder {
-    private Model model;
-    private double price;
-    private Color color;
+    private Model model = Model.IE123;
+    private double price = 4.4;
+    private Color color = Color.PINK;
 
     public Builder model(Model model) {
       this.model = model;

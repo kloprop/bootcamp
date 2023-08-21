@@ -1,5 +1,6 @@
 public class TestString {
   StringBuilder str = new StringBuilder();
+  StringBuffer sb = new StringBuffer("");
 
   public static void main(String[] args) {
     TestString str2 = new TestString();

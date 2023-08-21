@@ -1,21 +1,27 @@
 package Playground;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+
 class Solution {
-    public String destCity(List<List<String>> paths) {
-        //Map <String, Integer> map = new HashMap<>();
+    
+    private static final int ArrayList = 0;
 
-        Map <String, Integer> map = paths.stream().collect(Collectors.toMap(e -> e.get(0), e -> 1));
+    public static void main(String[] args) {
+        List <Integer> list = new ArrayList <>( );
+        list.add(4);
+        list.add(6);
+        list.add(7);
 
-        System.out.println(map);
-        return "default";
+        list.stream()
+        
     }
 }
 

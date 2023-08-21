@@ -22,18 +22,13 @@ public class Store {
         .filter(c -> c.getColor() == Color.YELLOW)//
         .collect(Collectors.toList());
   }
-
-  // public Optional <Car> findCar(Model model) {
-  //   return this.orders.stream()//
-  //       .filter(c -> c.getModel() == model)//
-  //       .findAny()//
-  //       .orElseGet(() -> Optional.of(new Car()));
-  // }
+  
   public Car findCar2(Model model) {
     return this.orders.stream()//
         .filter(c -> c.getModel() == model)//
         .findAny()//
         .orElseGet(() -> new Car());
   }
+  
 
 }

@@ -1,4 +1,6 @@
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Student {
     private String name;
@@ -100,6 +102,8 @@ public class Student {
     public static void main(String[] args) {
         Student student = new Student("John");
         Student.Bag bag = new Student.Bag();
+        Map <Integer, String> map = new HashMap<>();
+    
         
         Student.Grade grade = student.new Grade(90);
         grade.printStudentName();

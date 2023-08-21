@@ -28,13 +28,18 @@ public class Staff {
     , new Staff("Eric", new Department("IT"),70));
 
   
-     staffs.stream()//
+     Map <Department, List<Staff>> map2 = staffs.stream()//
+    .collect(Collectors.groupingBy(staff -> staff.department));// be careful of object 
+    
+    staffs.stream()//
     .collect(Collectors.groupingBy(staff -> staff.department))// be careful of object 
     .forEach((dept , staffList) -> System.out.println(dept +" "+ staffList));
 
     // 
     Map <Boolean, List<Staff>> gradeMap = staffs.stream()//
     .collect(Collectors.partitioningBy(staff -> staff.performance >=60));
+
+    System.out.println("Map :" +gradeMap);
 
     gradeMap.entrySet().stream().forEach(e -> System.out.println(e));
     
