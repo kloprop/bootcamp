@@ -32,5 +32,16 @@ public class JavaQuest52 {
   }
 
   public static boolean isPowerOfFour(int n) {
-  }
+    int count = 0;
+    while (true){
+        double res = Math.pow(4,count);
+        if (res > n)
+            break;
+        if (res == n){
+            return true;
+        }
+        count++;
+    }
+    return false;
+}
 }
