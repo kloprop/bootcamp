@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.swing.plaf.synth.SynthLookAndFeel;
 
 public class Student {
     private String name;
@@ -42,7 +43,7 @@ public class Student {
 
     // Static nested class
     // can not access outer Class Attribure
-    private static class Bag {
+    public static class Bag {
         int size;
         List<String> strings;
 
@@ -102,7 +103,9 @@ public class Student {
     public static void main(String[] args) {
         Student student = new Student("John");
         Student.Bag bag = new Student.Bag();
-        Map <Integer, String> map = new HashMap<>();
+        Bag bag1 = new Bag();
+        System.out.println(bag.getClass());
+        System.out.println(bag1.getClass());
     
         
         Student.Grade grade = student.new Grade(90);

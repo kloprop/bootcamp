@@ -2,6 +2,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 public class RandomStuff {
@@ -218,6 +219,24 @@ public class RandomStuff {
 StringBuilder sb56 = new StringBuilder("abc");
 char ch = sb56.append("null").charAt(1);
 System.out.println(ch);
+
+Integer [] arr = new Integer[]{1,3,4,4,2,5,6};
+Arrays.sort(arr,(n,n2) -> {
+  if (n > n2){
+    return -1;
+  }else{
+    return 1;
+  }
+});
+System.out.println(Arrays.toString(arr));
+
+String str = "dd";
+char chad = 'g';
+
+System.out.println(str);
+StringBuilder sb2 = new StringBuilder();
+
+
 
 
 

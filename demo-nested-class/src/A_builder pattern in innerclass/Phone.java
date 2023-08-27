@@ -1,4 +1,7 @@
 //Builder pattern 
+
+import java.util.Objects;
+
 public class Phone {
   private String number;
   private Color color;
@@ -12,13 +15,14 @@ public class Phone {
   }
 
   public static Builder builder(){
-    return new Phone.Builder();
+    return new Phone.Builder(); // return new Builder();
   }
 
   @Override
   public String toString (){
     return "[number:" +this.number + "] ," +"[color:" +this.color +"] ," +"[weight:"+this.weight+"]";
   }
+
   
   public static class Builder{
     // with same attributes of outer class
@@ -48,6 +52,7 @@ public class Phone {
     // Chain Method : replace different number of args constructors
     Phone phone = Phone.builder().color(Color.GREY).number("789456").weight(3.7d).build();
     System.out.println(phone);
+    
     Book book = Book.builder().author("John").page(4).build();
     System.out.println(book);
   }

@@ -25,6 +25,8 @@ public class Main {
     list.stream()//
     .collect(Collectors.groupingBy(c -> c.getModel()))//
     .forEach((key,value)-> System.out.println(String.format("%s :  %s", key,value)));;
+
+
     
 
     
