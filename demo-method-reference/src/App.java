@@ -15,11 +15,13 @@ public class App {
         Consumer <String> sysout3 = s->System.out.println(s);
         List <Integer> list = new ArrayList<>();
         list.forEach(System.out :: println);
+        // list.forEach(n -> System.out.println(n))
 
 
         String name = "john";
         Supplier <Integer> strLength = () -> "abc".length();
         Supplier <Integer> strLength2 = name ::length; // ? length()
+        
 
         List<String> words = Arrays.asList("apple", "banna", "orange");
 
