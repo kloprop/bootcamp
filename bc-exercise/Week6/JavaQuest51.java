@@ -30,8 +30,8 @@ Constraints:
 
 1 <= s.length <= 1000
 s contains lowercase English letters only. */
-
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class JavaQuest51 {
@@ -45,7 +45,25 @@ public class JavaQuest51 {
   }
 
   public static List<List<Integer>> largeGroupPositions(String s) {
-
+      List <List<Integer>> res = new LinkedList<>();
+      int start = 0;
+      char target = s.charAt(0);
+      for (int end = 1; end<s.length(); end++){
+        char curr = s.charAt(end);
+        if (curr == target){
+          continue;
+        }
+        if (curr != target && end - start >= 3){
+          res.add(List.of(start,end -1 ));
+        }
+        target = curr;
+        start = end;
+      }
+      int lastInd = s.length() -1;
+      if (target == s.charAt(lastInd) && s.length() - start >=3){
+        res.add(List.of(start,lastInd));
+      }
+      return res;
   }
 
 }

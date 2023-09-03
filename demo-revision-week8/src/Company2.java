@@ -49,9 +49,9 @@ public class Company2 {
    company.add(new Staff(1, 20000, "John"));
    company.add(new Staff(2, 30000, "Mary"));
 
-   List <Person> persons = Arrays.stream(company.staffs)
+   List <Person3> persons = Arrays.stream(company.staffs)
           .filter(s -> s.salary() > 20000)
-          .map( e -> new Person(e.name()))
+          .map( e -> new Person3(e.name()))
           .collect(Collectors.toList());
    
   }
