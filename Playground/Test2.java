@@ -7,6 +7,7 @@ import java.util.Stack;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 import javax.management.Query;
 import java.lang.reflect.Array;
 import java.util.ArrayDeque;
@@ -39,7 +40,7 @@ public class Test2  {
 
   List <Integer> list2 = new ArrayList<>();
   
-  int [] arr = new int []{2,3};
+  Integer [] arr = new Integer []{2,3};
   List <Integer> list3 = new LinkedList<>(Arrays.asList(3,4));
   List <Integer> list4 = List.of(3,4,8);
   // list4.add(4);
@@ -52,6 +53,13 @@ public class Test2  {
   int n = list5.stream().reduce(0, (sub, e) -> sub+e);
   System.out.println(n);
   System.out.println(n1);
+  
+  List <Integer> list7 = new LinkedList<>(Arrays.asList(arr)); 
+  list7.add(4);
+  Test [] arr6= new Test[]{new Test(6)}; 
+  Arrays.stream(arr6).collect(Collectors.toCollection(LinkedList :: new));
+  // List <Integer> list8 = new LinkedList<>(List.of(arr3)); 
+
   
   
 

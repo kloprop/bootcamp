@@ -2,6 +2,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
@@ -235,6 +236,10 @@ char chad = 'g';
 
 System.out.println(str);
 StringBuilder sb2 = new StringBuilder();
+
+int [] arr3 = new int[]{4,5};
+List <Integer> list = new LinkedList<>(List.of(arr3));
+System.out.println(list);
 
 
 
