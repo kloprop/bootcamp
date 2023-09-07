@@ -21,6 +21,7 @@ public class SpyTest {
   // has instance variables 
   // has instance methods
   // mock would override spy
+  // not suitable for unit test
 
   @InjectMocks
   Checkout checkout;

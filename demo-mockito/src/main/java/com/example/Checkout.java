@@ -30,8 +30,9 @@ public class Checkout {
     } else if (x == 0) {
       return y + this.calculator.substract(x, y);
     }
-    return this.calculator.multiply(x, y)
+    return this.calculator.multiply(x, y) 
             + this.calculator.substract(x, y);
+    // Use Spy to test multiply and substract's return value
   }
 
 

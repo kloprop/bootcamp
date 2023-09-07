@@ -18,7 +18,6 @@ public class MockTest {
 
   @Mock
   // Create a fake object
-  // Unit
   // No instance variables
   // Has instance methods, but can not execute the method
   Calculator calculator;
