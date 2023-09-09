@@ -10,6 +10,11 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 public class Test4 {
+
+  public class test6{
+    private String name;
+
+  }
   public static void main(String[] args) {
     Map <String,Integer> map = new HashMap<>();
     map.put("john",2); 
@@ -29,6 +34,10 @@ public class Test4 {
     map.forEach((key,value) -> map2.merge(key, value, (v1,v2) -> v1 + v2));
     System.out.println(map2);
     System.out.println(map);
+    char [] arr = new char[]{1,2,4,3};
+    int res = '1' + '1';
+    System.out.println(res);
+
     
     
   }

@@ -1,5 +1,5 @@
-create schema exercise3;
-use exercise3;
+create schema exercise4;
+use exercise4;
 
 CREATE TABLE PLAYERS(
 PLAYER_ID INTEGER NOT NULL UNIQUE,
@@ -45,22 +45,17 @@ all_first as (
 select p.player_id as id , p.group_id,coalesce(f.score,0) as score
 from players p left join first_score f 
 on p.player_id =  f.id )
-,
-all_second as (
-select p.player_id as id , p.group_id,coalesce (s.score,0) as score
-from players p left join second_score s 
-on p.player_id = s.id)
-,
-total_table as(
-select af.id as id, af.group_id,af.score + ase.score  as score
-from all_first af, all_second ase
-where af.id = ase.id)
+, 
+total_table as( 
+select a.id, a.group_id, a.score + coalesce(s.score, 0) as score
+from all_first a  left join second_score s
+on a.id = s.id
+)
 ,
 max_table as (
 select group_id,max(score) as score
 from total_table
 group by group_id)
-
 
 select m.group_id, min(t.id) as winner_id
 from max_table m , total_table t
@@ -69,19 +64,5 @@ group by m.group_id;
 
 
 
-
-
-
 select * from first_score;
 select * from second_score;
-
-
-
-
-
-
-
-
-
-
-
