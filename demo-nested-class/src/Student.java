@@ -58,7 +58,9 @@ public class Student {
         public static void clear(Bag bag) {
             
             bag.strings.clear();
-
+        }
+        public String name(){
+            return this.name();
         }
 
         @Override
@@ -101,8 +103,9 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        Student student = new Student("John");
-        Student.Bag bag = new Student.Bag();
+        Student student = new Student("Peter");
+        Student.Bag bag = new Student.Bag(); // create static nested class
+
         Bag bag1 = new Bag();
         System.out.println(bag.getClass());
         System.out.println(bag1.getClass());
@@ -110,9 +113,6 @@ public class Student {
         
         Student.Grade grade = student.new Grade(90);
         grade.printStudentName();
-
-
-    
     }
 
 }

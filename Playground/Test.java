@@ -1,5 +1,10 @@
 package Playground;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public  class Test {
@@ -24,6 +29,11 @@ public  class Test {
     System.out.println(queue.peek());
     System.out.println(queue.poll());
     
+    int [] arr = new int[]{1,3,4};
+    String [] arr1 = new String[]{"f","d"};
+    List <Integer> list = new ArrayList<>();
+    Collections.addAll(list,arr);
+    List <String> list2 = Arrays.asList(arr1); 
   }
  
  

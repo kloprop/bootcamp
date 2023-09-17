@@ -28,13 +28,13 @@ public class Student {
     }
     this.pocketMoney = pocketMoney;
   }
-
  /*  public static void main(String[] args) throws NameNotMatchException{
     Student student = new Student("John");
     student.setName("ds"); // if exception, throw it to the caller
   } */
   public static void main(String[] args) throws NameTooLongException{ 
     Student student = new Student("John");
+    
 
   /* try{ student.setName("dshjfhjfhgfgh"); // checked exception
   }catch (NameTooLongException e ){
@@ -57,7 +57,7 @@ public class Student {
   try {
     student2.name.length();
   }
-  catch(NullPointerException e){
+  catch(NullPointerException  d){
     System.out.println("null pointer");
   }
   }
